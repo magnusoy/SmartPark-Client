@@ -1,0 +1,12 @@
+{
+    "detection": {
+        "overlay": "../instance/overlays/heus.yml"
+    },
+    "playback": {
+        "update frequency": "1"
+    },
+    "model": "../model.h5",
+    "parameters": {
+        "id": "valore"
+    }
+}
