@@ -11,11 +11,12 @@ Website: https://github.com/magnusoy/
 
 # Importing packages
 from lib.client import Client
+from datetime import datetime, timedelta
 import configparser
 import time
 
-lastTokenUpdate = 22
 
+# Communicates with server
 if __name__ == "__main__":
     config = configparser.ConfigParser()
     config.read("../instance/config.ini")
@@ -23,7 +24,13 @@ if __name__ == "__main__":
     response = client.addParkinglot(config['Settings']['name'], config['Settings']['location'], config['Settings']['size'])
     print(response)
     print("New token accuired: {}".format(client.token))
+    tokenTime = datetime.now()
     while client.isConnected():
+        lastTokenUpdate = datetime.now() - tokenTime
+        if lastTokenUpdate > timedelta(days=29):
+            client.getToken()
+            print("New token accuired: {}".format(client.token))
+            tokenTime = datetime.now()
         response = client.updateParkinglot()
         print(response)
         time.sleep(60)
