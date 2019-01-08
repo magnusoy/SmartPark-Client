@@ -20,6 +20,21 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install -y xterm
 sudo apt-get install python3-dev libffi-dev libssl-dev -y
+sudo apt-get install libatlas-base-dev
+sudo apt-get install libjasper-dev
+sudo apt-get install libqtgui4
+sudo apt-get install python3-pyqt5
+sudo apt-get install libqt4-test
+
+```
+
+### Installing
+
+Clone or download repository to your home directory.
+
+```bash
+cd ~
+git clone https://github.com/magnusoy/SmartPark-Client.git
 ```
 
 Install dependencies
@@ -31,19 +46,10 @@ or
 pip3 install requests
 pip3 install opencv-python
 pip3 install pyyaml
-pip3 install Keras
+pip3 install keras
 pip3 install Theano
 pip3 install tensorflow
-pip3 install numpy
-```
-
-### Installing
-
-Clone or download repository to your home directory.
-
-```bash
-cd ~
-git clone https://github.com/magnusoy/SmartPark-Client.git
+pip3 install cython
 ```
 
 ### Example
