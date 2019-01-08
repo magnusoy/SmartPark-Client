@@ -14,7 +14,7 @@ Go to [SmartPark-Server](https://github.com/magnusoy/SmartPark-Server) for more 
 You will need [Python 3](https://www.python.org/) for using the provided files.
 Furthermore you will need to install all the dependencies listed below.
 
-Install Python 3 and xterm
+Install all of the following:
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
@@ -25,6 +25,8 @@ sudo apt-get install libjasper-dev
 sudo apt-get install libqtgui4
 sudo apt-get install python3-pyqt5
 sudo apt-get install libqt4-test
+sudo apt-get install libhdf5-dev
+sudo apt-get install libhdf5-serial-dev
 
 ```
 
